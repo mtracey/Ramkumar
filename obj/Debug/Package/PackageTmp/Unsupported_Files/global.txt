@@ -1,0 +1,336 @@
+
+
+body
+{
+font-size: 11px;
+direction: LTR;
+margin:	0px;
+border: 0px;
+background-color: #d6e8ff;
+cursor: default;
+scrollbar-3dlight-color:#6699CC;
+scrollbar-arrow-color:#567DB1;
+scrollbar-base-color:#D6E8FF;
+scrollbar-darkshadow-color:#6699CC;
+scrollbar-face-color:white;
+scrollbar-highlight-color:#D6E8FF;
+scrollbar-shadow-color:#D6E8FF;
+
+}
+
+td
+{
+font-size: 11px;
+}
+
+th
+{
+font-size: 11px;
+font-weight: normal;
+
+text-align: left;
+
+}
+
+table
+{
+cursor: default;
+}
+
+a,
+a:link img,
+a:link,
+a:visited img,
+a:visited,
+a:active img,
+a:active,
+a:hover img,
+a:hover
+{
+font-weight: normal;
+text-decoration: none;
+border: none;
+color: #000000;
+}
+
+a.ImportMapViewLink,
+a.ImportMapViewLink:link,
+a.ImportMapViewLink:visited
+{
+font-weight: normal;
+text-decoration: underline;
+border: none;
+color: #0000FF;
+}
+
+ul
+{
+margin:		0px;
+padding:    0px;
+list-style:	none;
+}
+
+button
+{
+font-family: Tahoma;
+font-size: 11px;
+line-height: 18px;
+height: 20px;
+width: 84px;
+text-align: center;
+cursor: pointer;
+border: 1px #3366CC solid;
+background-color: #CEE7FF;
+background-image: url('/_imgs/btn_rest.gif');
+background-repeat: repeat-x;
+border: 1px #3366CC solid;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+input,
+textarea,
+select
+{
+color: #000000;
+font-size: 11px;
+border:1px solid #6699cc;
+}
+
+INPUT.ms-crm-ReadOnly,
+TEXTAREA.ms-crm-ReadOnly,
+DIV.ms-crm-ReadOnly,
+SPAN.ms-crm-ReadOnly
+{
+background-color:	#eaf3ff;
+color:				#000000;
+border-color:		#C5C5C5;
+}
+
+body.stage
+{
+
+border-top:1px solid #6893cf;
+background-color: #d6e8ff;
+padding: 4px;
+background-repeat: repeat-x;
+background-image: url(/_imgs/app_back.gif);
+}
+
+table.stdTable
+{
+width: 100%;
+height: 100%;
+table-layout: fixed;
+}
+
+.autoellipsis
+{
+width:100%;
+overflow:hidden;
+text-overflow:ellipsis;
+behavior: url(/_static/_common/styles/autotooltip.htc);
+}
+
+
+
+
+UL.simpleTree
+{
+background-color: #FFFFFF;
+}
+
+LI.simpleTree
+{
+}
+
+A.simpleTree,
+A.simpleTree:hover
+{
+color: #000000;
+font-weight: normal;
+}
+
+A.simpleTree
+{
+cursor:hand;
+vertical-align: top;
+}
+IMG.simpleTree
+{
+padding-bottom: 2px;
+vertical-align: top;
+
+margin-right: 5px;
+
+}
+
+.selectedItem
+{
+border: solid 1px #6893cf;
+}
+.ms-crm-SelectOn,
+.selectedItem
+
+{
+background-color: #a7cdf0;
+}
+
+
+.ms-crm-GlowOn
+{
+background-color: #c4ddff;
+}
+
+SPAN.simpleTree
+{
+vertical-align: middle;
+width: 100%;
+}
+
+INPUT.ms-crm-Dialog-Lookup-QuickFind
+{
+background-color: #ffffff;
+behavior: url(/_static/_common/scripts/hintText.htc);
+width:100%;
+height: 20px;
+padding: 2px 5px;
+}
+LABEL.ms-crm-Dialog-Lookup-QuickFindHint
+{
+display: none;
+position: absolute;
+padding: 4px 5px;
+color: #7e7e7e;
+overflow: hidden;
+height: 20px;
+}
+
+A.ms-crm-FindButton
+{
+border: 0px;
+padding: 0px;
+margin: 0px;
+width: 21px;
+height: 20px;
+}
+TR.quickFindControl
+{
+behavior: url(/_static/_common/styles/quickfindcontrol.htc);
+}
+
+TD.ms-crm-Dialog-Lookup-Types
+{
+padding: 0px 5px;
+}
+
+DIV.ms-crm-SettingsPage
+{
+padding: 10px;
+width: 100%;
+height: 100%;
+background-color: #ffffff;
+border:	1px solid #15428b;
+}
+TABLE.ms-crm-SettingsPage
+{
+width: 100%;
+height: 100%;
+}
+TR.ms-crm-SettingsPage
+{
+vertical-align: top;
+}
+TD.ms-crm-SettingsPage
+{
+padding: 0px;
+}
+.ms-crm-Queue-Container
+{
+background-color: #ffffff;
+border: 1px solid #bbd4f6;
+padding: 4px;
+}
+
+TABLE.ms-crm-Group-Links
+{
+border:	1px solid #6699cc;
+background-color: #d6e8ff;
+width: 100%;
+background-image: url(/_imgs/formnav_header_back.gif);
+background-repeat: repeat-x;
+}
+TH.ms-crm-Group-Links
+{
+font-weight: bold;
+color: #15428b;
+font-size: 11px;
+padding: 8px;
+}
+TABLE.ms-crm-Group
+{
+border:	1px solid #6699cc;
+background-color: #ffffff;
+width: 100%;
+background-image: url(/_imgs/nav_header_back.gif);
+background-repeat: repeat-x;
+}
+TH.ms-crm-Group
+{
+font-weight: bold;
+color: #15428b;
+font-size: 11px;
+padding: 8px;
+}
+TR.ms-crm-Group
+{
+}
+TD.ms-crm-Group
+{
+padding: 0px 8px 8px 8px;
+}
+TABLE.ms-crm-storageBar
+{
+border: 1px solid #000000;
+padding: 1px;
+height: 12px;
+width: 120px;
+}
+TD.ms-crm-storageBarWarn
+{
+background-color: red;
+margin: 1px;
+}
+TD.ms-crm-storageBarOK
+{
+background-color: green;
+margin: 1px;
+}
+DIV.ms-crm-Syshealth-Spacer
+{
+padding: 5px;
+}
+
+A.ms-crm-Link,
+A.ms-crm-Link:link,
+A.ms-crm-Link:visited,
+A.ms-crm-Link:active
+{
+color: #15428b;
+}
+A.ms-crm-Link:hover
+{
+color: #0000ff;
+text-decoration:    underline;
+}
+
+.ms-crm-Hidden,
+.ms-crm-Hidden-NoBehavior
+{
+position:absolute;
+left:0px;
+top:-500px;
+width:1px;
+height:1px;
+overflow:hidden;
+}

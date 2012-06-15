@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="85a89dc0-d93b-4a87-8392-921af6750200" name="ramu@DEVELOPMENT4 2012-05-04 10:23:31" runUser="ANBGROUP\ramu" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="3195f68d-753b-40ec-bd46-b60ecf1e6833">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="ramu_DEVELOPMENT4 2012-05-04 10_23_31">
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadMenu.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\ChilkatDotNet2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\Telerik.Web.UI.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadUpload.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\AjaxControlToolkit.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadTabStrip.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadAjax.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadInput.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\AjaxPro.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadWindow.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\CSharp.ReportLibrary.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadPanelbar.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadCalendar.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadGrid.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\SMEPayroll.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\DataStreams.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\RadSplitter.Net2.dll" />
+      <DeploymentItem filename="D:\RAMU\PROJECTS\PAYROLLNEW\SMEPAYROLL_TFS_2010_1\bin\Ionic.Zip.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-04T10:23:31.5937500+08:00" queuing="2012-05-04T10:23:32.5937500+08:00" start="2012-05-04T10:23:32.6562500+08:00" finish="2012-05-04T10:23:32.9062500+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="DEVELOPMENT4" outcome="Warning" timestamp="2012-05-04T10:23:31.6093750+08:00">
+        <Text>Deployment is currently disabled. The deployment item 'SMEPayroll.dll' on test 'SMETEST.AddEditEmployeeTest.AddEmployee_DataBindingTest' was not deployed.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddEmployee_DataBindingTest" storage="d:\ramu\projects\payrollnew\smepayroll_tfs_2010_1\smetest\bin\debug\smetest.dll" id="0494bf6f-bd6d-ef1c-6a1d-71eaa58c5267">
+      <DeploymentItems>
+        <DeploymentItem filename="SMEPayroll.dll" />
+      </DeploymentItems>
+      <Execution id="4272e84a-9a5c-48d5-9690-7fcf96ad16a9" />
+      <TestMethod codeBase="D:/RAMU/PROJECTS/PAYROLLNEW/SMEPAYROLL_TFS_2010_1/SMETEST/bin/Debug/SMETEST.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SMETEST.AddEditEmployeeTest, SMETEST, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddEmployee_DataBindingTest" />
+      <AspNet webSiteUrl="http://localhost:4433/">
+        <Host pathToWebApp="F:\PROJECTS\SHASHANK\SME_TFS_2012\SMPPAYROLL_WORKING\SMEPayroll" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0494bf6f-bd6d-ef1c-6a1d-71eaa58c5267" executionId="4272e84a-9a5c-48d5-9690-7fcf96ad16a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4272e84a-9a5c-48d5-9690-7fcf96ad16a9" testId="0494bf6f-bd6d-ef1c-6a1d-71eaa58c5267" testName="AddEmployee_DataBindingTest" computerName="DEVELOPMENT4" startTime="2012-05-04T10:23:32.8281250+08:00" endTime="2012-05-04T10:23:32.8906250+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4272e84a-9a5c-48d5-9690-7fcf96ad16a9">
+      <Output>
+        <ErrorInfo>
+          <Message>The Web site path 'F:\PROJECTS\SHASHANK\SME_TFS_2012\SMPPAYROLL_WORKING\SMEPayroll' does not exist. Tests configured to run in ASP.NET Development Server must specify a valid path to the Web site. Correct the AspNetDevelopmentServerHost attribute for the test. For more information about ASP.NET unit tests, see "How to: Create an ASP.NET Unit Test" (http://go.microsoft.com/fwlink/?LinkId=62608) and "Testing Web Services" (http://go.microsoft.com/fwlink/?LinkId=62609) in the MSDN Library.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

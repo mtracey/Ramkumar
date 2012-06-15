@@ -1,0 +1,284 @@
+
+
+
+
+
+
+
+var nameControlFactory = null;
+
+
+
+
+function createPresenceControlInstance()
+{
+if (nameControlFactory)
+{
+return nameControlFactory.CreatePresenceControl();
+}
+
+return new ActiveXObject("Name.NameCtrl.1");
+}
+
+
+
+
+function destroyPresenceControlInstance(presenceControl)
+{
+if (nameControlFactory)
+{
+nameControlFactory.DestroyPresenceControl(presenceControl);
+}
+}
+
+
+
+
+function getPresenceUri(state)
+{
+var showoffline = 1;
+var img = "unknown.gif";
+switch (state)
+{
+case 0:
+img="imnon.png";
+break;
+case 11:
+img="imnonoof.png";
+break;
+case 1:
+if (showoffline)
+{
+img="imnoff.png";
+}
+else
+{
+img="blank.gif";
+}
+break;
+case 12:
+if (showoffline)
+{
+img="imnoffoof.png";
+}
+else
+{
+img="blank.gif";
+}
+break;
+case 2:
+img="imnaway.png";
+break;
+case 13:
+img="imnawayoof.png";
+break;
+case 3:
+img="imnbusy.png";
+break;
+case 14:
+img="imnbusyoof.png";
+break;
+case 4:
+img="imnaway.png";
+break;
+case 5:
+img="imnbusy.png";
+break;
+case 6:
+img="imnaway.png";
+break;
+case 7:
+img="imnbusy.png";
+break;
+case 8:
+img="imnaway.png";
+break;
+case 9:
+img="imndnd.png";
+break;
+case 15:
+img="imndndoof.png";
+break;
+case 10:
+img="imnbusy.png";
+break;
+case 16:
+img="imnidle.png";
+break;
+case 17:
+img="imnidleoof.png";
+break;
+case 18:
+img="imnblocked.png";
+break;
+case 19:
+img="imnidlebusy.png";
+break;
+case 20:
+img="imnidlebusyoof.png";
+break;
+}
+
+return "/_imgs/presence/" + img;
+}
+
+
+
+
+function calculateParentOffset(obj,objRet,rtl)
+{
+var objDX = 0;
+
+while (obj)
+{
+if (rtl)
+{
+if (obj.scrollWidth >= obj.clientWidth + obj.scrollLeft)
+{
+objDX = obj.scrollWidth - obj.clientWidth - obj.scrollLeft;
+}
+else
+{
+objDX = obj.clientWidth + obj.scrollLeft - obj.scrollWidth;
+}
+objRet.oouiX += obj.offsetLeft + objDX;
+}
+else
+{
+objRet.oouiX += obj.offsetLeft - obj.scrollLeft;
+}
+
+objRet.oouiY += obj.offsetTop - obj.scrollTop;
+obj = obj.offsetParent;
+}
+}
+
+
+
+
+function getImageLocation(oImg)
+{
+var rtl = LOCID_UI_DIR=="RTL";
+var objRet = new Object;
+
+objRet.oouiX = 0;
+objRet.oouiY = 0;
+
+
+calculateParentOffset(oImg,objRet,rtl);
+
+
+var oWindow = window;
+while(oWindow)
+{
+oFrame = oWindow.frameElement;
+if(oFrame != null)
+{
+calculateParentOffset(oFrame,objRet,rtl);
+}
+
+var oParent = oWindow.parent;
+
+if(oParent == oWindow)
+{
+break;
+}
+else
+{
+oWindow = oParent;
+}
+}
+
+
+
+
+
+objRet.oouiX -= 3;
+objRet.oouiY -= 3;
+
+return objRet;
+}
+
+
+
+
+function IsPresenceType(otype)
+{
+return otype==Contact || otype==SystemUser;
+}
+
+function addElementSipRequest(oElement)
+{
+return addSipRequest(oElement.oid,oElement.otype);
+}
+
+
+
+
+function addSipRequest(oid,otype)
+{
+var s = "";
+s += "<row oid=\"";
+s += CrmEncodeDecode.CrmXmlEncode(oid);
+s += "\" otype=\"";
+s += CrmEncodeDecode.CrmXmlEncode(otype);
+s += "\"/>";
+return s;
+}
+
+
+
+
+function findElementById(aoElements,oid)
+{
+for (var i=0; i < aoElements.length; i++)
+{
+
+if(aoElements[i].oid==oid)
+{
+return aoElements[i];
+}
+}
+return null;
+}
+
+
+
+
+function createPresenceInfo(oid, sipuri)
+{
+var oPresenceInfo = new Object();
+oPresenceInfo.oid = oid;
+oPresenceInfo.sipuri = sipuri;
+return oPresenceInfo;
+}
+
+
+
+
+function createPresenceInfoArray(oResult)
+{
+
+var oXmlDoc = CreateXmlDocument(false);
+oXmlDoc.loadXML(oResult.ReturnValue);
+
+
+var rowNodes = oXmlDoc.selectNodes("//row");
+
+var aoPresenceInfo = new Array();
+for (var i = 0; i < rowNodes.length ; i++)
+{
+aoPresenceInfo.push(createPresenceInfo(
+rowNodes[i].getAttribute("oid"),
+rowNodes[i].getAttribute("sipuri")));
+}
+return aoPresenceInfo;
+}
+
+
+
+
+function hasSipAttribute(o)
+{
+return typeof(o.sip) != "undefined";
+}
